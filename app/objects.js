@@ -14,9 +14,9 @@ exports.objectsAnswers = {
   iterate: function(obj) {
     var res = [];
     for(var key in obj){
-      res.push("'"+key+": "+obj[key]+"'")
+      if(obj.hasOwnProperty(key))
+      res.push(key+": "+obj[key])
     }
     return res;
-
   }
 };
