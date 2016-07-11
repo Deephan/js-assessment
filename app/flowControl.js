@@ -10,6 +10,11 @@ exports.flowControlAnswers = {
     //
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
-
+    var res = "";
+    if(num%3==0) res += "fizz";
+    if(num%5==0) res += "buzz";
+    if(isNaN(num)) res = false;
+    if(res=="" && typeof(num)=="number") res = num;
+    return res;
   }
 };
